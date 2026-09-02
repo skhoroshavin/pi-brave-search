@@ -1,0 +1,25 @@
+{
+  "name": "pi-brave-search",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skhoroshavin/pi-brave-search.git"
+  },
+  "description": "web_search tool for pi, backed by the Brave Search API",
+  "keywords": [
+    "pi-package"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "extensions/",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.4",
+    "@types/node": "^26.4.1",
+    "typebox": "^1.3.25",
+    "typescript": "^7.0.2"
+  }
+}
