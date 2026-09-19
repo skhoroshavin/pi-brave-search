@@ -14,10 +14,10 @@ interface SearchResult {
 async function braveSearch(query: string, apiKey: string, signal: AbortSignal | undefined): Promise<SearchResult[]> {
   const url = new URL("https://api.search.brave.com/res/v1/web/search");
   url.searchParams.set("q", query);
+  url.searchParams.set("count", "10");
   const res = await fetch(url.toString(), {
     headers: {
       Accept: "application/json",
-      "Accept-Encoding": "gzip",
       "X-Subscription-Token": apiKey,
     },
     signal,
