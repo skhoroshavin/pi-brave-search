@@ -14,7 +14,7 @@ pi install npm:@skhoroshavin/pi-brave-search
 Export your Brave Search API subscription token:
 
 ```bash
-export BRAVE_SEARCH_API_KEY=<your-token>
+export BRAVE_API_KEY=<your-token>
 ```
 
 Without it the tool errors with a hint instead of searching.

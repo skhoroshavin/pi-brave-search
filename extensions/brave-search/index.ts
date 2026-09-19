@@ -3,7 +3,7 @@ import { Type } from "typebox";
 
 // web_search (Brave Search API) for pi.
 
-const BRAVE_API_KEY_ENV_VAR = "BRAVE_SEARCH_API_KEY";
+const API_KEY_ENV = "BRAVE_API_KEY";
 
 interface SearchResult {
   title: string;
@@ -49,9 +49,9 @@ export default function (pi: ExtensionAPI) {
       }),
     }),
     async execute(_toolCallId, params, signal, onUpdate) {
-      const apiKey = process.env[BRAVE_API_KEY_ENV_VAR]?.trim();
+      const apiKey = process.env[API_KEY_ENV]?.trim();
       if (!apiKey) {
-        throw new Error(`${BRAVE_API_KEY_ENV_VAR} is not set. Export it to enable web_search.`);
+        throw new Error(`${API_KEY_ENV} is not set. Export it to enable web_search.`);
       }
       onUpdate?.({
         content: [{ type: "text", text: `Searching Brave for: "${params.query}"...` }],
