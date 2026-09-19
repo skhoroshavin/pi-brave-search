@@ -6,7 +6,7 @@ A `web_search` tool for [pi](https://github.com/earendil-works/pi-coding-agent),
 ## Install
 
 ```bash
-pi install npm:pi-brave-search
+pi install npm:@skhoroshavin/pi-brave-search
 ```
 
 ## Setup
